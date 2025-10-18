@@ -16,48 +16,60 @@ class OnboardingScreen extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: scaffoldPadding,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(height: 70.h),
-            Image.asset('assets/images/onboarding_dog.png'),
-            SizedBox(height: 50.h),
-            Text(
-              'Find Your Best Companion With Us',
-              style: TextStyles.font32W700,
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: 10.h),
-            Text(
-              'Join & discover the best suitable pets as per your preferences in your location',
-              style: TextStyles.font16W400.copyWith(
-                color: ColorsManager.grey9F,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 70.h),
+              Image.asset(
+                'assets/images/onboarding_dog.png',
+                width: 375.w,
+                height: 305.h,
+                fit: BoxFit.cover,
               ),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: 60.h),
-            AppElevatedButton(
-              onPressed: () {
-                HiveHelper.addDataToBox(
-                  boxName: HiveConstants.sharedPrefsBox,
-                  key: HiveConstants.isOnboardingCompleted,
-                  value: true,
-                );
-                context.pushReplacementNamed(Routes.homeScreen);
-              },
-              buttonChild: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset('assets/images/clow.png'),
-                  SizedBox(width: 12.w),
-                  Text(
-                    'Get Started',
-                    style: TextStyles.font18W500.copyWith(color: Colors.white),
-                  ),
-                ],
+              SizedBox(height: 50.h),
+              Text(
+                'Find Your Best Companion With Us',
+                style: TextStyles.font32W700,
+                textAlign: TextAlign.center,
               ),
-            ),
-          ],
+              SizedBox(height: 10.h),
+              Text(
+                'Join & discover the best suitable pets as per your preferences in your location',
+                style: TextStyles.font16W400.copyWith(
+                  color: ColorsManager.grey9F,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 60.h),
+              AppElevatedButton(
+                onPressed: () {
+                  HiveHelper.addDataToBox(
+                    boxName: HiveConstants.sharedPrefsBox,
+                    key: HiveConstants.isOnboardingCompleted,
+                    value: true,
+                  );
+                  context.pushReplacementNamed(Routes.homeScreen);
+                },
+                buttonChild: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'assets/images/clow.png',
+                      width: 24.w,
+                      height: 24.h,
+                      fit: BoxFit.cover,
+                    ),
+                    SizedBox(width: 12.w),
+                    Text(
+                      'Get Started',
+                      style: TextStyles.font18W500.copyWith(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

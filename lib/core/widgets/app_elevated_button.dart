@@ -47,12 +47,6 @@ class AppElevatedButton extends StatelessWidget {
           backgroundColor: WidgetStateProperty.all(
             backgroundColor ?? ColorsManager.tealB6,
           ),
-          padding: WidgetStateProperty.all<EdgeInsets>(
-            EdgeInsets.symmetric(
-              horizontal: horizontalPadding?.w ?? 72.w,
-              vertical: verticalPadding?.h ?? 14.h,
-            ),
-          ),
           fixedSize: WidgetStateProperty.all(
             Size(buttonWidth?.w ?? 297.w, buttonHeight ?? 54.h),
           ),

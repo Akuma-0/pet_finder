@@ -65,6 +65,13 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  # Integration testing
+  integration_test:
+    sdk: flutter
+  # Mocking for tests
+  mockito: ^5.4.4
+  # Build runner for code generation
+  build_runner: ^2.4.9
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
