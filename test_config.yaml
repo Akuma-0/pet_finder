@@ -1,0 +1,47 @@
+# Test configuration for Pet Finder app
+# This file helps VS Code and other IDEs understand the test structure
+
+# Test directories
+test-directories:
+  - test/
+  - integration_test/
+
+# Test file patterns
+test-patterns:
+  - "**/*_test.dart"
+  - "**/test_*.dart"
+
+# Coverage configuration
+coverage:
+  # Include patterns
+  include:
+    - "lib/**/*.dart"
+
+  # Exclude patterns
+  exclude:
+    - "lib/main.dart"
+    - "lib/**/*.g.dart"
+    - "lib/**/*.freezed.dart"
+    - "lib/**/*.mocks.dart"
+    - "test/**/*.dart"
+    - "integration_test/**/*.dart"
+
+# Test environment
+environment:
+  flutter_test: true
+  integration_test: true
+
+# Test scripts
+scripts:
+  unit-tests: "flutter test test/"
+  widget-tests: "flutter test test/ --tags widget"
+  integration-tests: "flutter test integration_test/"
+  all-tests: "flutter test"
+  coverage: "flutter test --coverage"
+
+# Dependencies for testing
+dev_dependencies:
+  - flutter_test
+  - integration_test
+  - mockito
+  - build_runner
