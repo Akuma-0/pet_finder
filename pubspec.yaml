@@ -30,8 +30,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  #A build system for Dart code generation and modular compilation
-  build_runner: ^2.9.0
   # State management
   flutter_bloc: ^9.1.1
   # Code generator (mainly used with cubit & retrofit)
@@ -58,6 +56,8 @@ dependencies:
   # A lightweight and blazing fast key-value database written in pure Dart.
   hive: ^2.2.3
   path_provider: ^2.1.0
+  # Environment variable loader
+  flutter_dotenv: ^6.0.0
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
@@ -103,6 +103,7 @@ flutter:
   assets:
     - assets/images/
     - assets/fonts/
+    - .env
 
   fonts:
     - family: Poppins
