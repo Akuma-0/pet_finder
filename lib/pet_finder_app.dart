@@ -23,6 +23,11 @@ class PetFinderApp extends StatelessWidget {
           primaryColor: ColorsManager.tealB6,
           scaffoldBackgroundColor: Colors.white,
           textTheme: TextTheme(bodyLarge: TextStyle(color: Colors.black)),
+          appBarTheme: AppBarTheme(
+            backgroundColor: Colors.white,
+            elevation: 0,
+            scrolledUnderElevation: 0,
+          ),
         ),
         initialRoute: isOnboardingSeen
             ? Routes.homeScreen

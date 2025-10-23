@@ -4,7 +4,6 @@ import 'package:integration_test/integration_test.dart';
 import 'package:pet_finder/core/helpers/constants.dart';
 import 'package:pet_finder/core/helpers/hive_helper.dart';
 import 'package:pet_finder/core/routing/app_router.dart';
-import 'package:pet_finder/main.dart' as app;
 import 'package:pet_finder/pet_finder_app.dart';
 
 void main() {
