@@ -105,7 +105,7 @@ class BreedTile extends StatelessWidget {
                           ),
                           SizedBox(width: 5.w),
                           Text(
-                            "${breed.weight!.metric ?? ''} kg",
+                            "${breed.weight?.metric ?? 'N/A'} kg",
                             style: TextStyles.font14W400,
                             overflow: TextOverflow.ellipsis,
                             maxLines: 1,

@@ -36,18 +36,21 @@ class HomeBlocBuilder extends StatelessWidget {
 
   Widget setupError() {
     return Center(
-      child: Row(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Icons.error_outline, size: 20.sp, color: Colors.red),
+          Icon(Icons.error_outline, size: 48.sp, color: Colors.red),
           SizedBox(height: 16.h),
           Text(
             'Failed to load breeds',
             style: TextStyle(fontSize: 16, color: Colors.red),
+            textAlign: TextAlign.center,
           ),
           SizedBox(height: 8.h),
           Text(
             'Please check your internet connection',
             style: TextStyle(fontSize: 14, color: Colors.grey),
+            textAlign: TextAlign.center,
           ),
         ],
       ),

@@ -28,7 +28,10 @@ class SearchBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
+      style: inputTextStyle,
       decoration: InputDecoration(
+        contentPadding: contentPadding,
         prefixIcon: prefixIcon,
         isDense: true,
         focusedBorder:
